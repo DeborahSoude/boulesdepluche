@@ -1,0 +1,11 @@
+<nav [class.menu]="paw">
+    <ul>
+      <li><a routerLink="/salon" routerLinkActive="active">Salon</a></li>
+      <li><a routerLink="/partenaires" routerLinkActive="active">Partenaires</a></li>
+      <li><a routerLink="/sante" routerLinkActive="active">Sante</a></li>
+    </ul>
+
+    <div class="paw" (click)="toogleMenu()">
+        <img src="../../assets/img/paw.png" alt="Empreinte de chat">
+    </div>
+</nav>

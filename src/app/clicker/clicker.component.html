@@ -1,0 +1,47 @@
+<div class="clicker-wrapper">
+    <button (click)="leave()" class='left-arrow'>←</button>
+    <div class="leftPage">
+        <h1>1 minute pour 1€</h1>
+        <h2>Pourquoi ? </h2>
+        <p>Notre refuge oeuvre sur la protection des animaux. Notre rêve est qu'aucun ne vive dans la rue. 
+            Toutes nos petites boules de p'luche, méritent une vie coin du feu. Pour mener à bien nos missions
+            nous avons besoin de moyens financiers conséquents mais ne demandons pas l'omone. 
+            Si l'envie vous venait de nous aider, vous pouvez faire un don en carressant le petit chat ci-joint. 
+        </p>
+        <h2>Comment ? </h2>
+        <p>Chaque petite caresse que vous apportez à Moustache ci-contre, ce n'est qu'une seconde de votre temps mais
+            c'est la possibilité de nous faire un don.
+        </p>
+        <ul>
+            <li>Cliquez sur Moustache pour faire grimper la jauge des coeurs</li>
+            <li>Une fois la jauge pleine, Moustache se réveille, vous pouvez choisir de faire un don ou de rejouer</li>
+            <li>Si vous décidez de faire un don, la jauge d'objectif se rempli.</li>
+        </ul>
+        <p>Nos boules de P'luche ont besoin de vous ♥</p>
+    </div>
+
+    <div class="rightPage">
+        <div class="chat">
+            <h2>Caressez-moi !</h2>
+            <img (click)="incCoeurs()" src="../../assets/img/moustacheSleeping.svg" alt="Illustration de Moustache le chat qui dort">
+        </div>
+        <div class="jauges">
+            <div class="jaugeCoeur"  [class.pop]="coeur == 0">
+                <div class="overlay">
+                    <div class="niveauCoeur" [style.top]="(coeur*5) + 'px'"></div>
+                </div>
+            </div>
+            <div class="jaugeArgent">
+                <div class="overlay">
+                    <div class="niveauArgent" [style.top]="(argent*5) + 'px'"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="displayOverlay" [class.visible]="coeur == 61"></div>
+    <div class="buttons">
+        <button [class.visible]="coeur == 61" (click)="incArgent()">Don de 1€</button>
+        <button [class.visible]="coeur == 61" (click)="replay()">Rejouer</button>
+        <button [class.visible]="coeur == 61" (click)="leave()">Quitter</button>
+    </div>
+</div>

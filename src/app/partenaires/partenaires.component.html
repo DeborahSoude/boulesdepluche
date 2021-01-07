@@ -1,0 +1,36 @@
+<div class="cuisine" [class.overlay]="selectedChat != undefined || partenaireDetailsCategorie != undefined">
+    <a class='right-arrow' routerLink="/sante" routerLinkActive="active">
+        <p>→</p>
+    </a>
+    <a class='left-arrow' routerLink="/salon" routerLinkActive="active">
+        <p>←</p>
+    </a>
+
+    <div *ngFor="let chat of chats; let index = index;">
+        <div *ngIf="chat.section == section" class="chat" [style.top]="(positions[index].y) + 'px'" [style.left]="(positions[index].x) + 'px'" (click)="onSelect(chat)">
+            <p>{{chat.nom}}</p>
+            <img src="{{ chat.illustration }}" alt="Illustration de {{ chat.nom }}">
+        </div>
+    </div>
+
+    <div class="thon">
+        <p>Quiz</p>
+        <img src="../../assets/img/boiteThon.svg" alt="illustration boite de thons">
+    </div>
+    <div class="croquettes">
+        <p>Les croquettes</p>
+        <img (click)="onSelectCategory('Les croquettes')" src="../../assets/img/croquettes.svg" alt="illustration de sac de croquette">
+    </div>
+    <div class="friandises">
+        <p>Les friandises</p>
+        <img  (click)="onSelectCategory('Les friandises')" src="../../assets/img/friandises.svg" alt="illustration boite de friandises">
+    </div>
+    <div class="patee">
+        <p>Les pâtées</p>
+        <img (click)="onSelectCategory('Les pâtées')" src="../../assets/img/patee.svg" alt="illustration de pêtée">
+    </div>
+
+</div>
+<app-details-membres [chat]="selectedChat" (removeOverlay)="removeOverlay()"></app-details-membres>
+<app-details-partenaires [selectedCategory]="partenaireDetailsCategorie" *ngIf="partenaireDetailsCategorie != undefined" (eventLeave)="closePartenairesDetails()"></app-details-partenaires>
+<app-quiz></app-quiz>

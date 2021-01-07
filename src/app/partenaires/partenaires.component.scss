@@ -1,0 +1,206 @@
+.cuisine {
+    background-image: url("../../assets/img/cuisine.jpg");
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    display: block;
+
+    &.overlay {
+        opacity: 0.25;
+    }
+
+    .right-arrow {
+        position: fixed;
+        height: 75vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 5vw;
+        top: 14vh;
+        right: 0;
+        text-decoration: none;
+        opacity: 0;
+
+        p {
+            font-size: 4rem;
+            color: #fff;
+            font-weight: 700;
+        }
+    }
+
+    .right-arrow:hover {
+        opacity: 1;
+        cursor: pointer;
+    }
+
+    .left-arrow {
+        position: fixed;
+        height: 75vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 5vw;
+        left: 0;
+        top: 14vh;
+        text-decoration: none;
+        opacity: 0;
+
+        &:hover {
+            opacity: 1;
+            cursor: pointer;
+        }
+
+        p {
+            font-size: 4rem;
+            color: #fff;
+            font-weight: 700;
+        }
+    }
+
+    .chat {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        cursor: pointer;
+        transition: 1s;   
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        p {
+            font-family: 'Architects Daughter', cursive, sans-serif;
+            color: #d15010;
+            text-shadow: #222 1px 0 2px;
+            font-size: 32px;
+            text-align: center;
+            opacity: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        &:hover {
+            p {
+                opacity: 1;
+            }
+        }
+    }
+
+    .thon {
+        position: absolute;
+        top: 15.55rem;
+        left: 17rem;
+        text-align: center;
+
+        img {
+            max-width: 50px;
+            width: 100%;
+            cursor: pointer;
+        }
+
+        p {
+            font-family: 'Architects Daughter', cursive, sans-serif;
+            color: #d15010;
+            text-shadow: #222 1px 0 2px;
+            font-size: 32px;
+            text-align: center;
+            opacity: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        &:hover {
+            p {
+                opacity: 1;
+            }
+        }
+    }
+
+    .croquettes {
+        position: absolute;
+        top: 39rem;
+        left: 69rem;
+        text-align: center;
+
+        img {
+            max-width: 160px;
+            width: 100%;
+            cursor: pointer;
+        }
+
+        p {
+            font-family: 'Architects Daughter', cursive, sans-serif;
+            color: #d15010;
+            text-shadow: #222 1px 0 2px;
+            font-size: 32px;
+            text-align: center;
+            opacity: 0;
+            margin: 0;
+        }
+
+        &:hover {
+            p {
+                opacity: 1;
+            }
+        }
+    }
+
+    .friandises {
+        position: absolute;
+        right: 14rem;
+        top: 25.4rem;
+        text-align: center;
+
+        img {
+            max-width: 90px;
+            width: 100%;
+            cursor: pointer;
+        }
+
+        p {
+            font-family: 'Architects Daughter', cursive, sans-serif;
+            color: #d15010;
+            text-shadow: #222 1px 0 2px;
+            font-size: 32px;
+            text-align: center;
+            opacity: 0;
+            margin: 0;
+        }
+
+        &:hover {
+            p {
+                opacity: 1;
+            }
+        }
+    }
+
+    .patee {
+        position: absolute;
+        top: 31.6rem;
+        left: 48rem;
+        text-align: center;
+
+        img {
+            max-width: 60px;
+            width: 100%;
+            cursor: pointer;
+        }
+
+        p {
+            font-family: 'Architects Daughter', cursive, sans-serif;
+            color: #d15010;
+            text-shadow: #222 1px 0 2px;
+            font-size: 32px;
+            text-align: center;
+            opacity: 0;
+            margin: 0;
+        }
+
+        &:hover {
+            p {
+                opacity: 1;
+            }
+        }
+    }
+}

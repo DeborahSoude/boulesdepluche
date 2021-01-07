@@ -1,0 +1,12 @@
+<div class="quiz">
+    <button (click)="leave()" class='left-arrow'>←</button>
+    <div>
+        <h1> {{ currentQuestion.intitule }} </h1>
+        <img src="../../assets/quiz/{{statusChat}}.svg" alt="">
+        <div>
+            <button *ngFor="let choix of currentQuestion.choix" (click)="nextStep(choix.id)">
+                {{ choix.prop }}
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+.quiz {
+    background-image: url("../../assets/img/openBook.png");
+    background-size: cover;
+    width: 64vw;
+    height: 74vh;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    left: 0;
+    right: 0;
+
+    .left-arrow {
+        position: absolute;
+        top: -3rem;
+        left: 3rem;
+        background: transparent;
+        outline: none;
+        font-size: 4rem;
+        color: #fff;
+        font-weight: 700;
+        border: none;
+        cursor: pointer;
+    }
+}

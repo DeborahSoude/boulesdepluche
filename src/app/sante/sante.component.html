@@ -1,0 +1,14 @@
+<div class="bibliotheque">
+    <a class='left-arrow' routerLink="/partenaires" routerLinkActive="active">
+        <p>←</p>
+    </a>
+
+    <div *ngFor="let chat of chats; let index = index;">
+        <div *ngIf="chat.section == section" class="chat" [style.top]="(positions[index].y) + 'px'" [style.left]="(positions[index].x) + 'px'" (click)="onSelect(chat)">
+            <p>{{chat.nom}}</p>
+            <img src="{{ chat.illustration }}" alt="Illustration de {{ chat.nom }}">
+        </div>
+    </div>
+</div>
+<app-details-membres [chat]="selectedChat" (removeOverlay)="removeOverlay()"></app-details-membres>
+

@@ -1,0 +1,49 @@
+.clock-wrapper {
+
+    .clock {
+        position:relative;
+        width:200px;
+        height:200px;
+        margin:40px auto;
+
+        .fond {
+            width: 100px;
+            height: 100px;
+            background: #fff;
+            border-radius: 100px;
+            position: absolute;
+            top: 9.45rem;
+            left: 3rem;
+        }
+
+        .rond {
+            background : #762d0f;
+            width: 15px;
+            height: 15px;
+            border-radius: 100px;
+            position: absolute;
+            top: 11.9rem;
+            left: 5.7rem;
+        }
+    
+        .hand {
+            position:absolute;
+            transform-origin: 0 0;
+            top:100%;
+            left:50%;
+            width:50px;
+            border-radius: 100px;
+            height:0px;
+            border-top:1px solid #d15010;
+    
+            &.hour-hand {
+                border-top-width:8px;
+                width: 35px;
+            }
+            
+            &.minute-hand {
+                border-top-width:4px;
+            }
+        }  
+    }
+}

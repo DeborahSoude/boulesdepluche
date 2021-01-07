@@ -1,0 +1,9 @@
+<div class="clock-wrapper">
+    <div class="clock">
+        <div class="fond"></div>
+        <div class="hand hour-hand" [style.transform]="'rotate(' + (heures|async) + 'deg)'"></div>
+        <div class="hand minute-hand" [style.transform]="'rotate(' + (minutes|async) + 'deg)'"></div>
+        <div class="hand second-hand" [style.transform]="'rotate(' + (secondes|async) + 'deg)'"></div>
+        <div class="rond"></div>
+    </div>
+</div>

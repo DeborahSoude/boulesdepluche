@@ -1,0 +1,70 @@
+<div *ngIf="chat != null" class="details-membres">
+    <button (click)="removeDetails()" class='left-arrow'>←</button>
+    <div class="leftPage">
+        <img src="{{ chat.illustration }}" alt="illustration de {{chat.nom}}">
+        <div class="identity">
+            <h2>{{chat.nom}}</h2>
+            <h3>alias {{chat.surnom | uppercase}}</h3>
+            <p>{{chat.race}}</p>
+            <p>{{chat.sexe}}</p>
+            <p>{{getAge()}}</p>
+        </div>
+        
+        <p><strong>{{chat.caractere}}</strong></p>
+        <p>{{chat.description}}</p>
+    
+        <table>
+            <tr>
+                <th>Données médicales</th>
+                <th>Oui</th>
+                <th>Non</th>
+            </tr>
+            <tr>
+                <td>Vaccin</td>
+                <td>{{chat.vaccin ? 'x' : ''}}</td>
+                <td>{{!chat.vaccin ? 'x' : ''}}</td>
+            </tr>
+            <tr>
+                <td>Puce</td>
+                <td>{{chat.puce ? 'x' : ''}}</td>
+                <td>{{!chat.puce ? 'x' : ''}}</td>
+            </tr>
+            <tr>
+                <td>Stérilisation</td>
+                <td>{{chat.sterilisation ? 'x' : ''}}</td>
+                <td>{{!chat.sterilisation ? 'x' : ''}}</td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <th>Rencontres avec les autres</th>
+                <th>Oui</th>
+                <th>Non</th>
+            </tr>
+            <tr>
+                <td>Enfants</td>
+                <td>{{chat.okEnfants ? 'x' : ''}}</td>
+                <td>{{!chat.okEnfants ? 'x' : ''}}</td>
+            </tr>
+            <tr>
+                <td>Chats</td>
+                <td>{{chat.okChats ? 'x' : ''}}</td>
+                <td>{{!chat.okChats ? 'x' : ''}}</td>
+            </tr>
+            <tr>
+                <td>Chiens</td>
+                <td>{{chat.okChiens ? 'x' : ''}}</td>
+                <td>{{!chat.okChiens ? 'x' : ''}}</td>
+            </tr>
+        </table>
+    </div>
+    <div class="rightPage">
+        <div class="photo">
+            <img src="{{chat.photo}}" alt="Photo de {{chat.nom}}">
+        </div>
+        <div class="buttons">
+            <a href="#">Intéressé ?</a>
+        </div>
+    </div>
+      
+</div>

@@ -1,0 +1,23 @@
+<div class="salon" [class.overlay]="selectedChat != undefined || clickerStatus">
+    <a class='right-arrow' routerLink="/partenaires" routerLinkActive="active">
+        <p>→</p>
+    </a>
+
+    <div *ngFor="let chat of chats; let index = index;">
+        <div *ngIf="chat.section == section">
+            <div class="chat" [style.top]="(positions[index].y) + 'px'" [style.left]="(positions[index].x) + 'px'" (click)="onSelect(chat)">
+                <p>{{chat.nom}}</p>
+                <img src="{{ chat.illustration }}" alt="Illustration de {{ chat.nom }}">
+            </div>
+        </div>
+    </div>
+    
+    <div class="dons">
+        <p>Dons</p>
+        <img class="pig" (click)="openClicker()" src="../../assets/img/pig.svg" alt="Tirelire">
+    </div>
+
+</div>
+<app-horloge></app-horloge>
+<app-details-membres [chat]="selectedChat" (removeOverlay)="removeOverlay()"></app-details-membres>
+<app-clicker *ngIf="clickerStatus" (eventLeave)="closeClicker()"></app-clicker>

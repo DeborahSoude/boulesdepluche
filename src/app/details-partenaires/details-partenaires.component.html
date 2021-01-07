@@ -1,0 +1,65 @@
+<div class="details-partenaires">
+    <button (click)="leave()" class='left-arrow'>←</button>
+    <div *ngFor="let partenaire of partenaires">
+        <div class="identity">
+            <h2>{{partenaire.brand}}</h2>
+            <p class="categorie">{{partenaire.categorie}}</p>
+        </div>
+        
+        <p><strong>Description:</strong></p>
+        <p>{{partenaire.description}}</p>
+    
+        <table>
+            <tr>
+                <th>Engagments</th>
+                <th>Oui</th>
+                <th>Non</th>
+            </tr>
+            <tr>
+                <td>Prouit bio</td>
+                <td>{{partenaire.isBio ? 'x' : ''}}</td>
+                <td>{{!partenaire.isBio ? 'x' : ''}}</td>
+            </tr>
+            <tr>
+                <td>Produit sans céréales</td>
+                <td>{{partenaire.isFreeCereal ? 'x' : ''}}</td>
+                <td>{{!partenaire.isFreeCereal ? 'x' : ''}}</td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <th>Âges</th>
+                <th>Oui</th>
+                <th>Non</th>
+            </tr>
+            <tr>
+                <td>Existe pour chaton</td>
+                <td>{{partenaire.isForKitten ? 'x' : ''}}</td>
+                <td>{{!partenaire.isForKitten ? 'x' : ''}}</td>
+            </tr>
+            <tr>
+                <td>Existe pour chat adulte</td>
+                <td>{{partenaire.isForAdult ? 'x' : ''}}</td>
+                <td>{{!partenaire.isForAdult ? 'x' : ''}}</td>
+            </tr>
+            <tr>
+                <td>Existe pour chat sénior</td>
+                <td>{{partenaire.isForSenior ? 'x' : ''}}</td>
+                <td>{{!partenaire.isForSenior ? 'x' : ''}}</td>
+            </tr>
+            <tr>
+                <td>Existe pour chat d'intérieur</td>
+                <td>{{partenaire.isForIndoor ? 'x' : ''}}</td>
+                <td>{{!partenaire.isForIndoor ? 'x' : ''}}</td>
+            </tr>
+            <tr>
+                <td>Existe pour chat stérilisé</td>
+                <td>{{partenaire.isForSterilized ? 'x' : ''}}</td>
+                <td>{{!partenaire.isForSterilized ? 'x' : ''}}</td>
+            </tr>
+        </table>
+        <div class="button">
+            <a href="{{partenaire.webSite}}">Voir le site du partenaire</a>
+        </div>
+    </div>
+</div>
