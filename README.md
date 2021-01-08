@@ -22,6 +22,7 @@ Liste des composants :
 - Chat membre => Au clic on ouvre le détail du chat
 - Sac de croquettes => Au clic on ouvre le détail des croquettes partenaires
 - Jouets => Au clic on ouvre le détail des boutiques partenaires
+- Thon => Au clic, on ouvre un petit jeu sur nos partenaires
 
 ## BIBLIOTHEQUE
 
